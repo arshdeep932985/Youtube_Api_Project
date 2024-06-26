@@ -17,7 +17,8 @@ console.log(channelDetail,videos)
     <Box minheight="95vh" >
 <Box >
   <div style={{background: 'linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(159,56,157,1) 0%, rgba(0,212,255,1) 100%)' , zIndex:10, height:'300px'}} />
-  <ChannelCard channelDetail={channelDetail} marginTop='-110px' marginLeft='41vw'/>
+  {/* <ChannelCard channelDetail={channelDetail} marginTop='-110px' marginLeft='41vw' /> */}
+  <ChannelCard channelDetail={channelDetail} marginTop='-110px' />
 </Box>
 <Box display='flex' p="2" >
 <Box sx={{mr:{sm:'130px'}}}/>
