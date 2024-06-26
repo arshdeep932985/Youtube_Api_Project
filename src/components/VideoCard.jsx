@@ -33,7 +33,7 @@ function timeAgo(date) {
 const VideoCard = ({video:{id:{videoId},snippet}}) => {
     console.log(videoId,snippet)
     let date=snippet.publishTime
-    let time=console.log(timeAgo(date))
+    let time=timeAgo(date)
   return (
    <Card sx={{width:{xs:'100%',sm:'358px',md:'280px'} ,boxShadow:'none', borderRadius:0}}>
     <Link to={videoId? `video/${videoId}`: demoVideoUrl}>
@@ -49,6 +49,13 @@ const VideoCard = ({video:{id:{videoId},snippet}}) => {
     <Typography variant="subtitle2" fontWeight="bold" color="gray" sx={{display:'flex'}}>
         {snippet?.channelTitle||demoChannelTitle}
         <CheckCircle sx={{width:'12px' ,color:'gray', ml:'5px',}}/>
+    </Typography>
+    </Link>
+
+    <Link to={videoId? `video/${videoId}`: demoVideoUrl}>
+    <Typography variant="subtitle2" fontWeight="bold" color="gray" sx={{display:'flex'}}>
+        {time}
+        
     </Typography>
     </Link>
     </CardContent>
